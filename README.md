@@ -20,3 +20,6 @@
 
 # วิธีการติดตั้ง
 $ pip pip install - r requirements.txt
+
+# วิธีใช้งาน
+เข้าไปเขียนแก้ไข link api ต่างๆในตัวโปรแกรมก่อน compiler
