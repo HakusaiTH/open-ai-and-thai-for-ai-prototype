@@ -14,20 +14,12 @@ from datetime import datetime
 from multiprocessing import Process
 import speech_recognition as sr
 
-# firebase
-cred = credentials.Certificate("D:\tomodachi-prototype in cmd\\ai-chan-3074e-firebase-adminsdk-8sgnr-2a8bbe6e28.json")
-firebase_admin.initialize_app(cred, {
-    'databaseURL': 'https://ai-chan-3074e-default-rtdb.asia-southeast1.firebasedatabase.app/'
-})
-
-ref = db.reference('/')
-
 #Open ai
-openai.api_key = "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"
+openai.api_key = "openai.api_key"
 model_engine = "text-davinci-003"
 
-#tem
-tem_api_key = "0bddcc3609d450dc7d5264d45b10ab09"
+#tem https://openweathermap.org/api
+tem_api_key = "tem_api_key"
 city = "ubon ratchathani"
 url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={tem_api_key}'
 respon = requests.get(url).json()
@@ -53,14 +45,6 @@ while True :
 
   prompt = translate(user_input, 'en')
 
-  if user_input == 'เปิดไฟที่1' :
-    response_output = "เปิดไฟที่1"
-    ref.set({'iot_1': '1'}) 
-
-  elif user_input == 'ปิดไฟที่1' :
-    response_output = "ปิดไฟที่1"
-    ref.set({'iot_1': '0'})
-
   completion = openai.Completion.create(
       engine=model_engine,
       prompt=prompt,
@@ -76,7 +60,7 @@ while True :
   #vaja 
   url_vaja = 'https://api.aiforthai.in.th/vaja'
   
-  headers_vaja = {'Apikey':'If66yNxYjCF1T5XtBgQ3k9VczUbHJn51','Content-Type' : 'application/x-www-form-urlencoded'}
+  headers_vaja = {'Apikey':'Apikey','Content-Type' : 'application/x-www-form-urlencoded'}
 
   params_vaja = {'text':response_output,'mode':'st'}
   
@@ -98,12 +82,12 @@ while True :
 
   sound = AudioSegment.from_wav('sound.wav')
 
-  #sen
+  #SENTIMENT ANALYSIS
   url_sen = "https://api.aiforthai.in.th/ssense" 
   params_sen = {'text':response_output}
   
   headers_sen = {
-      'Apikey': "If66yNxYjCF1T5XtBgQ3k9VczUbHJn51"
+      'Apikey': "Apikey"
   }
   response_sen = requests.get(url_sen, headers=headers_sen, params=params_sen).json()
   polarity_score = response_sen['sentiment']['polarity']
