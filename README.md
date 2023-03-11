@@ -1,3 +1,22 @@
-# open-ai-and-thai-for-ai-prototype
-ทดลองเล่น openai ทำงานร่วมกับ  api ของ thai for ai 
-เครื่องมือที่ใช้ Open ai, vaj,a SENTIMENT ANALYSIS, spech to text
+# open-ai-and-thai-for-ai-prototype ทดลองเล่น openai ทำงานร่วมกับ  api ของ thai for ai 
+
+โค้ดดังกล่าวเป็นโค้ด Python ที่ใช้ในการสื่อสารแบบสตรีมมิ่ง (streaming) ด้วยเสียงระหว่างผู้ใช้งานและโมเดล AI โดยโมเดล AI จะรับข้อความภาษาไทยจากผู้ใช้งาน 
+
+โดยโค้ดนี้ใช้ไลบรารีต่างๆ ดังนี้:
+
+mtranslate: ไลบรารีสำหรับแปลภาษา
+openai: ไลบรารีสำหรับเรียกใช้งานโมเดล AI จาก OpenAI
+requests: ไลบรารีสำหรับส่ง request ไปยัง API ต่างๆ
+playsound: ไลบรารีสำหรับเล่นไฟล์เสียง
+wave, struct: ไลบรารีสำหรับการจัดการกับไฟล์เสียง
+pydub: ไลบรารีสำหรับเล่นไฟล์เสียง
+datetime: ไลบรารีสำหรับจัดการเวลา
+speech_recognition: ไลบรารีสำหรับแปลงเสียงให้เป็นข้อความ
+
+โค้ดนี้ใช้ api ของ ai for thai สองตัวตัวในการช่วยทำงานเช่น
+
+SENTIMENT ANALYSIS : วิเคราะห์ความคิดเห็นและอารมณ์
+TEXT TO SPEECH : แปลงข้อความเป็นเสียง
+
+# วิธีการติดตั้ง
+$ pip pip install - r requirements.txt
