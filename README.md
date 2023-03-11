@@ -15,8 +15,8 @@
 
 โค้ดนี้ใช้ api ของ ai for thai สองตัวตัวในการช่วยทำงานเช่น
 
-SENTIMENT ANALYSIS : วิเคราะห์ความคิดเห็นและอารมณ์
-TEXT TO SPEECH : แปลงข้อความเป็นเสียง
+* SENTIMENT ANALYSIS : วิเคราะห์ความคิดเห็นและอารมณ์
+* TEXT TO SPEECH : แปลงข้อความเป็นเสียง
 
 # วิธีการติดตั้ง
 $ pip pip install - r requirements.txt
