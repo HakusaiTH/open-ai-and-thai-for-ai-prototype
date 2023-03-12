@@ -23,3 +23,6 @@ $ pip pip install - r requirements.txt
 
 ## วิธีใช้งาน
 เข้าไปเขียนแก้ไข link api ต่างๆในตัวโปรแกรมก่อน compiler
+
+##ตัวอย่าง
+![สกรีนช็อต 2023-03-12 110647](https://user-images.githubusercontent.com/104154862/224523976-641a1c09-fc12-455e-bc65-65ee732f9cec.jpg)
